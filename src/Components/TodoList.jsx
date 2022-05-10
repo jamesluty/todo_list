@@ -1,6 +1,5 @@
 import React from 'react'
 import styles from './styles.module.css'
-import {useState} from 'react'
 
 const TodoList = (props) => {
     const deleteItem = (idx) => {
