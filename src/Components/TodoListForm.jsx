@@ -5,9 +5,6 @@ import {useState} from 'react'
 const TodoListForm = (props) => {
     const [todo, setTodo] = useState("");
 
-    const func = () => {
-    }
-
     const newItem = (e) => {
         e.preventDefault();
         if (todo.length === 0){
@@ -26,8 +23,8 @@ const TodoListForm = (props) => {
     return (
         <div>
             <h1 className={styles.header}>To-Do List</h1>
-            <form className={styles.form} onSubmit={newItem} onChange={(e) => setTodo(e.target.value)} value={todo}>
-                <input id="input" className={styles.input} onChange={func} value={todo}/>
+            <form className={styles.form} onSubmit={newItem} value={todo}>
+                <input id="input" className={styles.input} onChange={(e) => setTodo(e.target.value)} value={todo}/>
                 <button className={styles.button}>Add to List</button>
             </form>
             <hr />

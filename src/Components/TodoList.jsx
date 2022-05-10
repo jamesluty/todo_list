@@ -13,10 +13,10 @@ const TodoList = (props) => {
     const boxChange = (idx) => {
         const newList = props.todoList.map((todo, id) => {
             if (idx === id){
-            // todo.complete = !todo.complete
-            const updateList = {...todo, complete: !todo.complete}
-            return updateList
-        }
+                // todo.complete = !todo.complete
+                const updateList = {...todo, complete: !todo.complete}
+                return updateList
+            }
         return todo;
         })
         props.setTodoList(newList)
@@ -40,8 +40,7 @@ const TodoList = (props) => {
                         <button className={styles.button2} onClick={(e) => deleteItem(idx)}>Delete</button>
                     </div>
                 )
-            }
-            )}
+            })}
             </div>
         </div>
     )
